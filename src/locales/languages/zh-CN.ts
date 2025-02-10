@@ -50,9 +50,9 @@ export default {
     addBookmark: '增加书签',
     searchBookmarks: '搜索书签内容',
     bookmarksAddTag: '新增标签',
-    bookmarksRenameTag: null, // missing translation
-    bookmarksDeleteTag: null, // missing translation
-    deleteBookmarksWithTag: null, // missing translation
+    bookmarksRenameTag: '重命名书签标签', // missing translation
+    bookmarksDeleteTag: '删除书签标签', // missing translation
+    deleteBookmarksWithTag: '以标签删除书签', // missing translation
     bookmarksSimilarItems: '近似项目',
     searchHistory: '搜索历史',
     importBookmarks: '自HTML文件导入书签',
@@ -74,7 +74,7 @@ export default {
     taskDeleteWarning: {
       unsafeHTML: '标签组已删除 <a>恢复？</a>',
     },
-    tasksSearchTabs: null, // missing translation
+    tasksSearchTabs: '任务搜索条', // missing translation
     returnToTask: '返回上一个标签组',
     taskDescriptionTwo: '%t 和 %t', // used to describe a task that has two tabs, %t is replaced with the tab titles
     taskDescriptionThree: '%t, %t, 和其他%n个标签', // used to describe a task that has three or more tabs
@@ -159,26 +159,26 @@ export default {
     settingsUserscriptsToggle: '允许自定义脚本',
     settingsShowDividerToggle: '显示标签页边界',
     settingsSeparateTitlebarToggle: '显示浏览器标题栏',
-    settingsAutoplayToggle: null, // missing translation
+    settingsAutoplayToggle: '允许自动播放', // missing translation
     settingsOpenTabsInForegroundToggle: '在前台打开新标签页',
     settingsUserscriptsExplanation: {
       unsafeHTML:
         '自定义脚本允许您改变网站行为 - <a href="https://github.com/minbrowser/min/wiki/userscripts">查看更多</a>.',
     },
-    settingsUserscriptShowDirectory: null, // missing translation,
+    settingsUserscriptShowDirectory: '自定义脚本显示目录', // missing translation,
     settingsUserAgentToggle: '自定义浏览器User-Agent',
     settingsUpdateNotificationsToggle: '自动检查更新',
     settingsUsageStatisticsToggle: {
       unsafeHTML:
         '发送使用情况统计信息 (<a href="https://github.com/minbrowser/min/blob/master/docs/statistics.md">更多说明</a>)',
     },
-    settingsStartupOptions: null, // missing translation
-    settingsStartupCreateTask: null, // missing translation
-    settingsStartupNewTaskandBackground: null, // missing translation
-    settingsStartupNewTaskOnly: null, // missing translation
-    settingsNewWindowOptions: null, // missing translation
-    settingsNewWindowCreateTask: null, // missing translation
-    settingsNewWindowPickTask: null, // missing translation
+    settingsStartupOptions: '启动选项', // missing translation
+    settingsStartupCreateTask: '启动创建任务', // missing translation
+    settingsStartupNewTaskandBackground: '启动新背景任务', // missing translation
+    settingsStartupNewTaskOnly: '仅启动新人物', // missing translation
+    settingsNewWindowOptions: '新窗口选项', // missing translation
+    settingsNewWindowCreateTask: '新窗口创建任务', // missing translation
+    settingsNewWindowPickTask: '新窗口选择任务', // missing translation
     settingsSearchEngineHeading: '搜索引擎',
     settingsDefaultSearchEngine: '选择默认的搜索引擎:',
     settingsDDGExplanation: '将 DuckDuckGo 设为默认的搜索引擎可以直接在搜索栏查看搜索结果。',
@@ -198,7 +198,7 @@ export default {
     appMenuDuplicateTab: '复制标签页',
     appMenuNewPrivateTab: '新的隐私标签页',
     appMenuNewTask: '新标签组',
-    appMenuNewWindow: null, // missing translation
+    appMenuNewWindow: '新窗口', // missing translation
     appMenuSavePageAs: '页面另存为',
     appMenuPrint: '打印',
     appMenuEdit: '编辑',
@@ -239,7 +239,7 @@ export default {
     appMenuQuit: '退出 %n',
     appMenuBringToFront: '前置所有窗口',
     /* PDF Viewer */
-    PDFInvertPage: null, // missing translation
+    PDFInvertPage: '倒转页面', // missing translation
     PDFPageCounter: {
       unsafeHTML: "<input type='text'/> / <span id='total'></span> 页",
     },
@@ -276,7 +276,7 @@ export default {
     passwordManagerSetupStep2: '然后把工具拖动到下面的框中：',
     passwordManagerSetupDragBox: '把工具拖动到这里',
     passwordManagerSetupInstalling: '安装中...',
-    passwordManagerBitwardenSignIn: null, // missing translation
+    passwordManagerBitwardenSignIn: 'Bitwarden登录', // missing translation
     passwordManagerSetupSignIn: '登录密码管理器以使用自动填充。你的凭证不会在Min内存储。',
     disableAutofill: '关闭自动填充',
     passwordManagerSetupUnlockError: '解锁密码存储区失败：',
@@ -286,11 +286,11 @@ export default {
     passwordCaptureSavePassword: '是否保存%s的密码？',
     passwordCaptureSave: '保存',
     passwordCaptureDontSave: '不保存',
-    passwordCaptureNeverSave: null, // missing translation
+    passwordCaptureNeverSave: '从不保存', // missing translation
     /* Password viewer */
     savedPasswordsHeading: '已保存密码',
     savedPasswordsEmpty: '当前未保存任何密码',
-    savedPasswordsNeverSavedLabel: null, // missing translation
+    savedPasswordsNeverSavedLabel: '从不保存密码的标签', // missing translation
     deletePassword: '删除保存的%s密码？',
     /* Dialogs */
     loginPromptTitle: '登录 %h',
@@ -300,7 +300,7 @@ export default {
     email: '邮箱',
     password: '密码',
     secretKey: '密钥',
-    openExternalApp: null, // missing translation
+    openExternalApp: '打开外部程序', // missing translation
     clickToCopy: '点击复制',
     copied: '已复制',
   },

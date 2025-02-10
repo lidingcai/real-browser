@@ -26,11 +26,13 @@ const __dirname = dirname(__filename)
 // ├─┬ dist
 // │ └── index.html    > Electron-Renderer
 //
+
 process.env.DIST_ELECTRON = join(__dirname, '..')
 process.env.DIST = join(process.env.DIST_ELECTRON, '../dist')
 process.env.VITE_PUBLIC = process.env.VITE_DEV_SERVER_URL
   ? join(process.env.DIST_ELECTRON, '../public')
   : process.env.DIST
+
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith('6.1')) app.disableHardwareAcceleration()
@@ -57,8 +59,8 @@ app.setPath('userData', userDataPath)
 // const win: BrowserWindow | null = null
 // Here, you can also use other preload
 const preload = join(__dirname, '../preload/index.mjs')
-// const indexHtml = join(process.env.DIST, 'index.html')
-const wholeAppUrl = process.env.VITE_DEV_SERVER_URL || 'write-production-url-here'
+const indexHtml = join(process.env.DIST, 'index.html')
+const wholeAppUrl = process.env.VITE_DEV_SERVER_URL || 'http://127.0.0.1:8080'
 const saveWindowBounds = () => {
   if (windows.getCurrent()) {
     const bounds = Object.assign(windows.getCurrent().getBounds(), {
@@ -183,8 +185,9 @@ function createWindowWithBounds(bounds) {
     // Open devTool if the app is not packaged
     newWin.webContents.openDevTools()
   } else {
-    newWin.loadURL(wholeAppUrl)
-    // newWin.loadFile(indexHtml)
+    // newWin.loadURL(wholeAppUrl)
+    newWin.loadFile(indexHtml)
+    // newWin.webContents.openDevTools()
   }
 
   // Test actively push message to the Electron-Renderer
@@ -556,7 +559,7 @@ export const initMain = () => {
   })
 
   /* places service */
-  /* ignore this first because I really don't know what it's for 
+  /* ignore this first because I really don't know what it's for
   const placesPage = `file://${__dirname}/js/places/placesService.html`
 
   let placesWindow = null

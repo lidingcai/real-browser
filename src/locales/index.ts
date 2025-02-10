@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n'
 import enUS from './lang/en-US'
 import zhCN from './lang/zh-CN'
 
-export const messages = {
+export const messages:Record<string,any> = {
   'en-US': enUS,
   'zh-CN': zhCN,
 }
@@ -41,7 +41,7 @@ export const initDocumentLang = () => {
     */
 
     document.querySelectorAll('[data-string]').forEach((el) => {
-      const str = l(el.getAttribute('data-string'))
+      const str = l(el.getAttribute('data-string')!)
       if (typeof str === 'string') {
         el.textContent = str
       }
@@ -50,7 +50,7 @@ export const initDocumentLang = () => {
       // }
     })
     document.querySelectorAll('[data-label]').forEach((el) => {
-      const str = l(el.getAttribute('data-label'))
+      const str = l(el.getAttribute('data-label')!)
       if (typeof str === 'string') {
         el.setAttribute('title', str)
         el.setAttribute('aria-label', str)
@@ -59,7 +59,7 @@ export const initDocumentLang = () => {
       }
     })
     document.querySelectorAll('[data-value]').forEach((el) => {
-      const str = l(el.getAttribute('data-value'))
+      const str = l(el.getAttribute('data-value')!)
       if (typeof str === 'string') {
         el.setAttribute('value', str)
       } else {

@@ -17,7 +17,11 @@
     "defineProps": "readonly",
     "defineEmits": "readonly"
   },
-  "plugins": ["vue", "@typescript-eslint", "simple-import-sort"],
+  "plugins": [
+    "vue",
+    "@typescript-eslint",
+    "simple-import-sort"
+  ],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
     "sourceType": "module",
@@ -27,7 +31,12 @@
     }
   },
   "settings": {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
   },
   "rules": {
     "no-console": "off",
@@ -37,7 +46,6 @@
     "no-param-reassign": "off",
     "no-shadow": "off",
     "guard-for-in": "off",
-
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
@@ -46,7 +54,6 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "vue/first-attribute-linebreak": 0,
-
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -61,7 +68,7 @@
         "varsIgnorePattern": "^_"
       }
     ],
-    "no-use-before-define": "off",
+    "no-use-before-define": 1,
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": "off",
@@ -71,18 +78,33 @@
   },
   "overrides": [
     {
-      "files": ["*.vue"],
+      "files": [
+        "*.vue"
+      ],
       "rules": {
-        "vue/component-name-in-template-casing": [2, "kebab-case"],
+        "vue/component-name-in-template-casing": [
+          2,
+          "kebab-case"
+        ],
         "vue/require-default-prop": 0,
         "vue/multi-word-component-names": 0,
         "vue/no-reserved-props": 0,
         "vue/no-v-html": 0,
-        "vue-scoped-css/enforce-style-type": ["error", { "allows": ["scoped"] }]
+        "vue-scoped-css/enforce-style-type": [
+          "error",
+          {
+            "allows": [
+              "scoped"
+            ]
+          }
+        ]
       }
     },
     {
-      "files": ["*.ts", "*.tsx"], // https://github.com/typescript-eslint eslint-recommended
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ], // https://github.com/typescript-eslint eslint-recommended
       "rules": {
         "constructor-super": "off", // ts(2335) & ts(2377)
         "getter-return": "off", // ts(2378)
@@ -97,7 +119,7 @@
         "no-redeclare": "off", // ts(2451)
         "no-setter-return": "off", // ts(2408)
         "no-this-before-super": "off", // ts(2376)
-        "no-undef": "off", // ts(2304)
+        "no-undef": 1, // ts(2304)
         "no-unreachable": "off", // ts(7027)
         "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
         "no-var": "error", // ts transpiles let/const to var, so no need for vars any more

@@ -1,5 +1,5 @@
 {
-  "name": "min-browser in typescript",
+  "name": "min-browser-in-typescript",
   "version": "1.0.0",
   "description": "followed a version of https://github.com/minbrowser/min , but transfer to typescript",
   "keywords": [
@@ -36,7 +36,7 @@
     "i18next": "23.8.2",
     "json5": "2.2.3",
     "mousetrap": "1.6.5",
-    "pdfjs-dist": "4.0.379",
+    "pdfjs-dist": "4.2.67",
     "quick-score": "0.2.0",
     "sortablejs": "1.15.2",
     "trusted-types": "2.0.0",

@@ -187,7 +187,7 @@ export const tabBar = {
       .getButtons(tabId)
       .reverse()
       .forEach((button) => {
-        tabEl.insertBefore(button, tabEl.children[0])
+        tabEl!.insertBefore(button, tabEl!.children[0])
       })
 
     const iconArea = tabEl.getElementsByClassName('tab-icon-area')[0]

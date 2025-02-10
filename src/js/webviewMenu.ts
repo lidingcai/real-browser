@@ -90,7 +90,7 @@ export const webviewMenu = {
 
     /* links */
 
-    let link: null | string = data.linkURL
+    let link: undefined | string = data.linkURL
 
     // show link items for embedded frames, but not the top-level page (which will also be listed as a frameURL)
     if (!link && data.frameURL && data.frameURL !== currentTab.url) {
@@ -99,7 +99,7 @@ export const webviewMenu = {
 
     if (link === 'about:srcdoc') {
       /* srcdoc is used in reader view, but it can't actually be opened anywhere outside of the reader page */
-      link = null
+      link = undefined
     }
 
     const mediaURL = data.srcURL

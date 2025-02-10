@@ -20,7 +20,7 @@ function showSearchbarPlaceResults(text: string, input: HTMLInputElement, event:
   const responseSent = Date.now()
 
   let searchFn: Function
-  let resultCount
+  let resultCount:number = 0
   if (pluginName === 'fullTextPlaces') {
     searchFn = places.searchPlacesFullText
     resultCount = 4 - searchbarPlugins.getResultCount('places')

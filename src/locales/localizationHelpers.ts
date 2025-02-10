@@ -2,8 +2,10 @@
 
 import enUS from './languages/en-US'
 import zhCN from './languages/zh-CN'
+// import { LangType } from './LangType'
 
-const languages = {
+// type LanguageKeyType = 'zh-CN'|'en-US'
+const languages:Record<string,any> = {
   'zh-CN': zhCN,
   'en-US': enUS,
 }
@@ -80,7 +82,7 @@ export const initLocalizationHelpers = () => {
     }
 
     document.querySelectorAll('[data-string]').forEach((el) => {
-      const str = l(el.getAttribute('data-string'))
+      const str = l(el.getAttribute('data-string')!)
       if (typeof str === 'string') {
         el.textContent = str
       } else if (str && str.unsafeHTML && el.hasAttribute('data-allowHTML')) {
@@ -88,7 +90,7 @@ export const initLocalizationHelpers = () => {
       }
     })
     document.querySelectorAll('[data-label]').forEach((el) => {
-      const str = l(el.getAttribute('data-label'))
+      const str = l(el.getAttribute('data-label')!)
       if (typeof str === 'string') {
         el.setAttribute('title', str)
         el.setAttribute('aria-label', str)
@@ -97,7 +99,7 @@ export const initLocalizationHelpers = () => {
       }
     })
     document.querySelectorAll('[data-value]').forEach((el) => {
-      const str = l(el.getAttribute('data-value'))
+      const str = l(el.getAttribute('data-value')!)
       if (typeof str === 'string') {
         el.setAttribute('value', str)
       } else {

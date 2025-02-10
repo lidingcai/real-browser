@@ -70,7 +70,7 @@ window.throttle = function (
     const now = +new Date()
     // eslint-disable-next-line prefer-rest-params
     const args = arguments
-    if (last && now < last + threshhold) {
+    if (last && now < last + (threshhold as number)) {
       // hold on to it
       clearTimeout(deferTimer)
       deferTimer = setTimeout(() => {
